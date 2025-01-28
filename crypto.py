@@ -95,7 +95,7 @@ def main():
     while True:
         for symbol in cryptos:
             try:
-                ColorPrinter.print_info(f"Fetching data for {symbol}")
+                #ColorPrinter.print_info(f"Fetching data for {symbol}")
                 price = fetch_data(symbol)
                 if price is not None:
                     current_time = datetime.now()
@@ -148,7 +148,7 @@ def main():
             except Exception as e:
                 ColorPrinter.print_warning(f"An error occurred for {symbol}: {e}")
 
-        time.sleep(2)  # Check every 2 seconds
+        time.sleep(10)  # Check every 2 seconds
 
 if __name__ == "__main__":
     main()
